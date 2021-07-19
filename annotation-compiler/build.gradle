@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+import org.gradle.internal.jvm.Jvm
+
+
+dependencies {
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.squareup:javapoet:1.11.1'
+    implementation project(':annotation')
+    implementation files('/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/lib/tools.jar')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
